@@ -8,6 +8,7 @@ class Wireman < Formula
   version "0.1.4"
 
   bottle do
+    root_url "https://github.com/preiter93/wireman/releases/download/v0.1.4"
     # macOS Apple Silicon (aarch64)
     sha256 cellar: :any_skip_relocation, arm64_monterey: "577604876f2ba9d24b6f6fa42bf5bc50b0cb20843d143a185d6630f805f37de6"
     # macOS Intel (x86_64)
