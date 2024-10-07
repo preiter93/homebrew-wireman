@@ -7,6 +7,8 @@ class Wireman < Formula
   head "https://github.com/preiter93/wireman.git", branch: "main"
   version "0.1.4"
 
+  depends_on "rust" => :build
+
   bottle do
     root_url "https://github.com/preiter93/wireman/releases/download/v0.1.4"
     # macOS Apple Silicon (aarch64)
@@ -21,8 +23,14 @@ class Wireman < Formula
     sha256 cellar: :any_skip_relocation, linux_x86_64: "eb02fd2b9053c4c6a1c4de0657a9e733644cd2c331ebc1da0d2c8d291b482737"
   end
 
+  # def install
+  #   bin.install "wireman"
+  # end
   def install
-    bin.install "wireman"
+    # We pass this arg to disable the `dynamic-analysis` feature on macOS.
+    # This feature is not supported on macOS and fails to compile.
+
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
