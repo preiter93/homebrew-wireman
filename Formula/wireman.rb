@@ -1,36 +1,31 @@
 class Wireman < Formula
   desc "Wireman: A grpc client for the terminal"
   homepage "https://github.com/preiter93/wireman"
-  url "https://github.com/preiter93/wireman/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "9378dc100599c844d68e86e4bf5ba31b11f6c1f591f4bf3c83864215612b4401"
-  license any_of: ["MIT"]
+  license "MIT"
   head "https://github.com/preiter93/wireman.git", branch: "main"
-  version "0.1.4"
 
-  # depends_on "rust" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/preiter93/wireman/releases/download/v0.1.4/wireman-0.1.4-aarch64-apple-darwin.tar.gz"
+      sha256 "09a844bcb4850948dd2adb576114b41d4821b1db7cec391c5d0d293cf729dd17"
+    else
+      url "https://github.com/preiter93/wireman/releases/download/v0.1.4/wireman-0.1.4-x86_64-apple-darwin.tar.gz"
+      sha256 "7fdc492dcdaa2a5b4be8c76c5b1ffbb1c2af709e99a0a4454ecb1f69156f7e15"
+    end
+  end
 
-  # bottle do
-  #   root_url "https://github.com/preiter93/wireman/releases/download/v0.1.4"
-  #   # macOS Apple Silicon (aarch64)
-  #   sha256 cellar: :any_skip_relocation, arm64_monterey: "577604876f2ba9d24b6f6fa42bf5bc50b0cb20843d143a185d6630f805f37de6"
-  #   # macOS Intel (x86_64)
-  #   sha256 cellar: :any_skip_relocation, monterey: "e28f9d45d0efb46d3b901244a89fd37215cdbfe6bc3bad7b0b3efd3d59f4bc09"
-  #   # Linux ARM (aarch64)
-  #   sha256 cellar: :any_skip_relocation, linux_arm64: "0d11f756e57a9a5d2ea15b355796ec47e50b048548f6fc57bc96cbf6d2c86da1"
-  #   # Linux Intel 32-bit (i686)
-  #   sha256 cellar: :any_skip_relocation, linux_i686: "5bac1b8c324ee865f7391c7c209321755a7f79615aa901d4207220da5f7d80c5"
-  #   # Linux Intel 64-bit (x86_64)
-  #   sha256 cellar: :any_skip_relocation, linux_x86_64: "eb02fd2b9053c4c6a1c4de0657a9e733644cd2c331ebc1da0d2c8d291b482737"
-  # end
-
-  # def install
-  #   bin.install "wireman"
-  # end
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/preiter93/wireman/releases/download/v0.1.4/wireman-0.1.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "33849a89b53d0d34f14243719ca106581738975e0dddd0e663571e0a39aee09c"
+    else
+      url "https://github.com/preiter93/wireman/releases/download/v0.1.4/wireman-0.1.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "712ee8272ca5aa4e11e9db16e4cdfde115b76e7fe36517d37e4ac4dcc0880ae1"
+    end
+  end
   
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "wireman"
   end
 
   test do
