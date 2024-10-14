@@ -1,6 +1,7 @@
 class Wireman < Formula
   desc "Wireman: A grpc client for the terminal"
   homepage "https://github.com/preiter93/wireman"
+  version "0.1.4"
   license "MIT"
   head "https://github.com/preiter93/wireman.git", branch: "main"
 
