@@ -8,20 +8,20 @@ class Wireman < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/preiter93/wireman/releases/download/v0.2.1/wireman-0.2.1-aarch64-apple-darwin.tar.gz"
-      sha256 "4afeb7c0b2c707c8eadda22c0731f123a680c589e2b972363e2fa9a793b05bf4"
+      sha256 "97744b062902ac9e0e2e9c08c778b0f07312309fd73375b3ce77094ea4c1b33c"
     else
       url "https://github.com/preiter93/wireman/releases/download/v0.2.1/wireman-0.2.1-x86_64-apple-darwin.tar.gz"
-      sha256 "a1b20e04da231e09e2940f86c7fff6c2fd9bbf5be2d3a84d66d5285fcbfbc9ce"
+      sha256 "303327c4d5d487f3f78de787f6b4321bd53609806f9e67d4b4860e9cb5c0a175"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/preiter93/wireman/releases/download/v0.2.1/wireman-0.2.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "093fb6dcd1eb0077159870d05b01a213bebf5e71b3954352c0e407ecc464f9ee"
+      sha256 "ca36d085f197154d7f40126cb5bc8101f22ff9a88eef8695a2d854bcda8582fa"
     else
       url "https://github.com/preiter93/wireman/releases/download/v0.2.1/wireman-0.2.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "100cfb06c5ac7cbea40083366615412670978128991fea0f1221f5b60fa6ffd7"
+      sha256 "a4880a8dbb361c08a805ff0e0a11ccb2368a405f6bba349f2e1d92a30b2685d8"
     end
   end
   
