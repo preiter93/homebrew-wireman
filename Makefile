@@ -1,7 +1,7 @@
 install:
 	brew install --build-from-source ./Formula/wireman.rb
 
-version = 0.2.3
+version = 0.2.4
 
 download:
 	curl -LO https://github.com/preiter93/wireman/releases/download/v$(version)/wireman-$(version)-aarch64-apple-darwin.tar.gz
