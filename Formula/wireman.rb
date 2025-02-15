@@ -10,7 +10,7 @@ class Wireman < Formula
       url "https://github.com/preiter93/wireman/releases/download/v0.2.6/wireman-0.2.6-aarch64-apple-darwin.tar.gz"
       sha256 "1cde614058116f9b359144cdad5ea5a552a249e4db3bd78a2e3f44522a19da6c"
     else
-      rl "https://github.com/preiter93/wireman/releases/download/v0.2.6/wireman-0.2.6-x86_64-apple-darwin.tar.gz"
+      url "https://github.com/preiter93/wireman/releases/download/v0.2.6/wireman-0.2.6-x86_64-apple-darwin.tar.gz"
       sha256 "967568f3bbe073a2a2645edb03d22ef97a5ef832296b663ae2838dbfd891de50"
     end
   end
