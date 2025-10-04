@@ -1,27 +1,27 @@
 class Wireman < Formula
   desc "Wireman: A grpc client for the terminal"
   homepage "https://github.com/preiter93/wireman"
-  version "0.2.8"
+  version "0.2.9"
   license "MIT"
   head "https://github.com/preiter93/wireman.git", branch: "main"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/preiter93/wireman/releases/download/v0.2.8/wireman-0.2.8-aarch64-apple-darwin.tar.gz"
-      sha256 "d967feb4d56e25a27f04c68775bbaaf233c058af76ff6148667202082b5d8841"
+      url "https://github.com/preiter93/wireman/releases/download/v0.2.9/wireman-0.2.9-aarch64-apple-darwin.tar.gz"
+      sha256 "3a5885ec346de37ba79fb090abaaa80c010d90df13d3d878afe946e9cb9e0b8c"
     else
-      url "https://github.com/preiter93/wireman/releases/download/v0.2.8/wireman-0.2.8-x86_64-apple-darwin.tar.gz"
-      sha256 "200f52cc1d4c2de361ec17bcef990a007bf2a0e6880cc5708136efde4e796f41"
+      url "https://github.com/preiter93/wireman/releases/download/v0.2.9/wireman-0.2.9-x86_64-apple-darwin.tar.gz"
+      sha256 "c968beb7b23e044c3ff8d5ff986de52ab75ef7fb91a7b5ad719a684ab4ec8683"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/preiter93/wireman/releases/download/v0.2.8/wireman-0.2.8-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7f32acc2a0b8feb79d3fc6630df71d677a038a45827ef246586d83a621719d27"
+      url "https://github.com/preiter93/wireman/releases/download/v0.2.9/wireman-0.2.9-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0809e6c6ea8e07f96598de1ce7493ced50c3944f7002ff26e02adc4dbd6405b4"
     else
-      url "https://github.com/preiter93/wireman/releases/download/v0.2.8/wireman-0.2.8-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9f90e864a7e78e2e42245663ee32f2db0f9951f191bac1993416f2b5aad57538"
+      url "https://github.com/preiter93/wireman/releases/download/v0.2.9/wireman-0.2.9-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cd715458782e1deb446a0ed8d70af10dec8c0c7bdbd8a37c923e4735ed506d3d"
     end
   end
   
